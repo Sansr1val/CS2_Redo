@@ -2,13 +2,15 @@ public class Node {
 	
 	/*Declaration of fields that would serve
 	 * as a storage of a nodes' data which is 
-	 * a integer type and pointer which is a Node type.*/
+	 * a integer type and pointer which is a Node type.
+	 */
 	private int data;
 	private Node next;
 
 	/*Node constructor which does not take
 	 * any parameters and also assigning default
-	 * values to its' data and pointer.*/
+	 * values to its' data and pointer.
+	 */
 	public Node() {
 		data = 0;
 		next = null;
@@ -16,7 +18,8 @@ public class Node {
 
 	/*Nodes getters and setters methods
 	 * to able to access its data and 
-	 * pointer fields.*/
+	 * pointer fields.
+	 */
 	public Node(int data) {
 		this.data = data;
 		next = null;
