@@ -7,6 +7,13 @@ public class Main {
 	static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 	public static void main(String[] args) throws IOException, InterruptedException {
+		
+		/*
+		 * The main menu of the program. Calls the methods of the operations selected by
+		 * the command input of the user. Each methods also performs input checking to
+		 * ensure no errors would occur. If an error occurs, the user is returned into
+		 * the main menu.
+		 */	
 		while (true) {
 			try {
 				System.out.println("---HASH TABLE---");
@@ -40,7 +47,8 @@ public class Main {
 				case 4:
 					deleteKey();
 					break;
-
+						
+				// Exits the program.
 				case 5:
 					System.out.print("\n--Exit--" + "\nProgram will be terminated");
 
@@ -59,7 +67,11 @@ public class Main {
 		}
 	}
 	
-	
+	/*
+	 * Adds a key to the Hash Table.
+	 * Only valid inputs are Positive Integers.
+	 * The hash is displayed when adding new keys.
+	 */
 	public static void addKey() throws IOException {
 		try {
 			System.out.println("\n--Add New Key--");
@@ -79,7 +91,7 @@ public class Main {
 		}
 	}
 	
-	
+        // Displays the contents of the Hash Table.	
 	public static void view() {
 		System.out.println("\n--Display Hash Table--");
 		System.out.println(hashtable.view());
@@ -87,6 +99,11 @@ public class Main {
 	}
 	
 	
+	/*
+	 * Searches for a key in the Hash Table. 
+	 * Only valid inputs are Positive Integer
+	 * Displays the key and its index if found, shows a prompt if not.
+	 */
 	public static void search() throws IOException {
 		try {
 			System.out.println("\n--Search Key--");
@@ -109,6 +126,11 @@ public class Main {
 	}
 	
 	
+	/*
+	 * Deletes a key in the Hash Table. 
+	 * Only valid inputs are Positive Integer
+	 * Deletes the key if found, shows a prompt if not.
+	 */
 	public static void deleteKey() throws IOException {
 		try {
 			System.out.println("\n--Delete Key--");
