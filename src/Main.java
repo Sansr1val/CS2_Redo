@@ -93,7 +93,7 @@ public class Main {
 			int key = Integer.parseInt(reader.readLine());
 			
 			if(key<=0) {
-				System.out.println("Numbers <=0 does not exist in the Hash Table");
+				System.out.println("Numbers <=0 does not exist in the Hash Table.\nPlease try again.");
 			}else {
 				if(hashtable.search(key) !=0) {
 					System.out.println("Index : " + hashtable.search(key) + " Key : " + key);
@@ -112,7 +112,7 @@ public class Main {
 			System.out.print("Enter Key to Delete: ");
 			int key = Integer.parseInt(reader.readLine());
 			if(key<=0) {
-				System.out.println("Numbers <=0 does not exist in the Hash Table");
+				System.out.println("Numbers <=0 does not exist in the Hash Table.\nPlease try again.");
 			}else {
 				if(hashtable.delete(key)) {
 					System.out.println("Key is deleted successfully!");
