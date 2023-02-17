@@ -104,10 +104,7 @@ public class Main {
 			
 		} catch (NumberFormatException e) {
 			System.out.println("The only allowed inputs are POSITIVE INTEGERS!\nPlease try again.");
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println(
-					"The only allowed inputs are POSITIVE INTEGERS, no Negative Integer!\nPlease try again.");
-		}
+		} 
 	}
 	public static void deleteKey() throws IOException {
 		try {
@@ -125,10 +122,7 @@ public class Main {
 			}
 		} catch (NumberFormatException e) {
 			System.out.println("The only allowed inputs are POSITIVE INTEGERS!\nPlease try again.");
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println(
-					"The only allowed inputs are POSITIVE INTEGERS, no Negative Integer!\nPlease try again.");
-		}
+		} 
 
 	}
 }
