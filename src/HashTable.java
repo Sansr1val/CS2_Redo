@@ -32,7 +32,7 @@ public class HashTable {
 
 	/*
 	 * Searches for a key in the Hash Table using the LinkedList class' find function.
-	 * THe hash is first computed by the hash function, the key is searched 
+	 * The hash is first computed by the hash function, the key is searched 
 	 * in the list found at the hash.
 	 */
 	public int search(int key) {
@@ -47,14 +47,19 @@ public class HashTable {
 	/*
 	 * Deletes a key in the Hash Table using the LinkedList class' remove function.
 	 * The hash is computed by the hash function and the linked list at the hash is searched
-	 * for the key.
-	 * It returns the boolean value of the 
+	 * for the key and deletes it.
+	 * It returns the boolean value of the boolean value that the remove function of the LinkedList 
+	 * class will return.
 	 */
 	public boolean delete(int key) {
 		int hash = hashFunction(key);
 		return table[hash].remove(key);
 	}
-
+	
+	/*
+	 * Used to compute the hash. Utilizes the modulo division method to create hash values.
+	 * Returns the hash.
+	 */
 	public static int hashFunction(int key) {
 		int hash = key % 10;
 		return hash;
