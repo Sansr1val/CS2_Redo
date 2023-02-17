@@ -7,10 +7,7 @@ public class Main {
 	static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-
-
 		while (true) {
-
 			try {
 				System.out.println("---HASH TABLE---");
 				System.out.println("\n1. Add New Key");
@@ -62,6 +59,7 @@ public class Main {
 		}
 	}
 	
+	
 	public static void addKey() throws IOException {
 		try {
 			System.out.println("\n--Add New Key--");
@@ -80,11 +78,14 @@ public class Main {
 			System.out.println("The only allowed inputs are POSITIVE INTEGERS!\nPlease try again.");
 		}
 	}
+	
+	
 	public static void view() {
 		System.out.println("\n--Display Hash Table--");
 		System.out.println(hashtable.view());
 
 	}
+	
 	
 	public static void search() throws IOException {
 		try {
@@ -106,6 +107,8 @@ public class Main {
 			System.out.println("The only allowed inputs are POSITIVE INTEGERS!\nPlease try again.");
 		} 
 	}
+	
+	
 	public static void deleteKey() throws IOException {
 		try {
 			System.out.println("\n--Delete Key--");
