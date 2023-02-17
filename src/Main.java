@@ -113,8 +113,8 @@ public class Main {
 			if(key<=0) {
 				System.out.println("Numbers <=0 does not exist in the Hash Table.\nPlease try again.");
 			}else {
-				if(hashtable.search(key) !=0) {
-					System.out.println("Index : " + hashtable.search(key) + " Key : " + key);
+				if(hashtable.search(key)) {
+					System.out.println("Index : " + HashTable.hashFunction(key) + " Key : " + key);
 				}else {
 					System.out.println("Key does not exist in the hashtable.");
 				}
