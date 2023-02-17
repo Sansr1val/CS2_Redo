@@ -92,10 +92,14 @@ public class Main {
 			System.out.print("Enter Key to Search: ");
 			int key = Integer.parseInt(reader.readLine());
 			
-			if(hashtable.search(key) !=0) {
-				System.out.println("Index : " + hashtable.search(key) + " Key : " + key);
+			if (key<=0) {
+				System.out.println("Numbers <=0 does not exists in the Hash Table.");
 			}else {
-				System.out.println("Key does not exist in the hashtable.");
+				if(hashtable.search(key) !=0) {
+					System.out.println("Index : " + hashtable.search(key) + " Key : " + key);
+				}else {
+					System.out.println("Key does not exist in the hashtable.");
+				}
 			}
 		} catch (NumberFormatException e) {
 			System.out.println("The only allowed inputs are POSITIVE INTEGERS!\nPlease try again.");
@@ -109,10 +113,15 @@ public class Main {
 			System.out.println("\n--Delete Key--");
 			System.out.print("Enter Key to Delete: ");
 			int key = Integer.parseInt(reader.readLine());
-			if(hashtable.delete(key)) {
-				System.out.println("Key is deleted successfully!");
+			
+			if(key<=0) {
+				System.out.println("Numbers <=0 does not exists in the Hash Table.");
 			}else {
-				System.out.println("Key is not found in the Hash Table.");
+				if(hashtable.delete(key)) {
+					System.out.println("Key is deleted successfully!");
+				}else {
+					System.out.println("Key is not found in the Hash Table.");
+				}
 			}
 		} catch (NumberFormatException e) {
 			System.out.println("The only allowed inputs are POSITIVE INTEGERS!\nPlease try again.");
