@@ -19,8 +19,8 @@ public class HashTable {
 	
 	/*
 	 * Shows the contents of the HashTable using the LinkedList class' displayInfo function.
-	 * Starts the display with an arrow "->" if the list is not empty,
-	 * otherwise it will display nothing.
+	 * Starts the display with an arrow "->" if the list is not empty.
+	 * Then returns str.
 	 */
 	public String view() {	
 		String str = "";
@@ -34,7 +34,7 @@ public class HashTable {
 	 * Searches for a key in the Hash Table using the LinkedList class' find function.
 	 * The hash is first computed by the hash function, then the key is searched 
 	 * in the list found at the hash.
-	 * Returns the hash if found, return 0 if not.
+	 * If find function returns true, returns hash, else if find function returns false returns 0.
 	 */
 	public int search(int key) {
 		int hash = hashFunction(key);
