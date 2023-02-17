@@ -88,7 +88,7 @@ public class LinkedList {
 	
 	/*
 	 * Returns true if the list is empty (head == null).
-	 * Otherwise, it returns false.
+	 * Otherwise, it returns false
 	 */
 	public boolean isEmpty() {
 		boolean isEmpty = true;
