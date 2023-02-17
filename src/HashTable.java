@@ -34,7 +34,7 @@ public class HashTable {
 	 * Searches for a key in the Hash Table using the LinkedList class' find function.
 	 * The hash is first computed by the hash function, then the key is searched 
 	 * in the list found at the hash.
-	 * If find function returns true, returns hash, else if find function returns false returns 0.
+	 * If find function returns true, returns true, else if find function returns false, returns false.
 	 */
 	public boolean search(int key) {
 		int hash = hashFunction(key);
