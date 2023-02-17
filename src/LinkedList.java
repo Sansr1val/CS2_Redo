@@ -1,6 +1,7 @@
 public class LinkedList {
 	private Node head;
 	
+	// Setters and Getters of the head node
 	public Node getHead() {
 		return head;
 	}
