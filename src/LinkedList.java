@@ -8,7 +8,12 @@ public class LinkedList {
 	private void setHead(Node head) {
 		this.head = head;
 	}
-
+	
+        /*
+	 * Method for adding a new node. If the linked list is empty, 
+         * the new node will be the head of the list. 
+         * If not, the new node will be added at the end of the list.
+	 */ 
 	public void append(Node node) {
 		if (head == null) {
 			head = node;
@@ -21,6 +26,10 @@ public class LinkedList {
 		}
 	}
 
+	/*
+	 * Searches for a key in the List.
+	 * Returns true if found, otherwise, it returns false.
+	 */
 	public boolean find(int key) {
 		Node currentNode = head;
 		
@@ -32,7 +41,13 @@ public class LinkedList {
 		return false;
 	}
 	
-
+	/*
+	 * Deletes a key in the list.
+	 * It first checks if the list is empty. 
+	 * If the list is empty, it returns false, otherwise it checks if the head node contains the key.
+	 * If found on the head node, the node is deleted and returns true, otherwise, the list is traversed.
+	 * If it's found, the key is deleted and returns true, otherwise, returns false.
+	 */
 	public boolean remove(int key) {
 		if(this.head == null) {
 			return false;
@@ -52,7 +67,11 @@ public class LinkedList {
 		return false;
 	}
 	
-
+	/*
+	 * Displays the contents of the list.
+	 * Each key is segmented by the string " -> ".
+	 * A substring is made to remove the last unnecessary " -> ".
+	 */
 	public String displayInfo() {
 		Node currentNode = head;
 		String str = "";
@@ -66,6 +85,10 @@ public class LinkedList {
 		return str;
 	}
 	
+	/*
+	 * Returns true if the list is empty (head == null).
+	 * Otherwise, it returns false.
+	 */
 	public boolean isEmpty() {
 		boolean isEmpty = true;
 		if(this.head == null) {
