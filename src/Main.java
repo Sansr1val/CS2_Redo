@@ -9,10 +9,10 @@ public class Main {
 	public static void main(String[] args) throws IOException, InterruptedException {
 
 
-		System.out.println("---HASH TABLE---");
 		while (true) {
 
 			try {
+				System.out.println("---HASH TABLE---");
 				System.out.println("\n1. Add New Key");
 				System.out.println("2. Display Hash Table");
 				System.out.println("3. Search");
