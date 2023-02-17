@@ -36,12 +36,12 @@ public class HashTable {
 	 * in the list found at the hash.
 	 * If find function returns true, returns hash, else if find function returns false returns 0.
 	 */
-	public int search(int key) {
+	public boolean search(int key) {
 		int hash = hashFunction(key);
 		if(table[hash].find(key)) {
-			return hash;
+			return true;
 		}else {
-			return 0;
+			return false;
 		}
 	}
 	
