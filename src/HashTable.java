@@ -9,7 +9,6 @@ public class HashTable {
 
 	public void add(int key) {
 		int hash = hashFunction(key);
-		System.out.println("Hash: " + hash);
 		table[hash].append(new Node(key));
 	}
 
@@ -35,7 +34,7 @@ public class HashTable {
 		return table[hash].remove(key);
 	}
 
-	private static int hashFunction(int key) {
+	public static int hashFunction(int key) {
 		int hash = key % 10;
 		return hash;
 	}
