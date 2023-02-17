@@ -9,10 +9,10 @@ public class Main {
 	public static void main(String[] args) throws IOException, InterruptedException {
 
 
+		System.out.println("---HASH TABLE---");
 		while (true) {
 
 			try {
-				System.out.println("---HASH TABLE---");
 				System.out.println("\n1. Add New Key");
 				System.out.println("2. Display Hash Table");
 				System.out.println("3. Search");
@@ -63,7 +63,6 @@ public class Main {
 	}
 	
 	public static void addKey() throws IOException {
-
 		try {
 			System.out.println("\n--Add New Key--");
 			System.out.print("Enter New Key: ");
@@ -72,12 +71,13 @@ public class Main {
 			if (key <= 0) {
 				System.out.println("Only Enter POSITIVE INTEGERS!\nPlease try again.");
 			} else {
+				int hash = HashTable.hashFunction(key);
+				System.out.println("Hash: " + hash);
 				hashtable.add(key);
 				System.out.println("Key added successfully!");
 			}
 		} catch (NumberFormatException e) {
 			System.out.println("The only allowed inputs are POSITIVE INTEGERS!\nPlease try again.");
-
 		}
 	}
 	public static void view() {
@@ -92,14 +92,10 @@ public class Main {
 			System.out.print("Enter Key to Search: ");
 			int key = Integer.parseInt(reader.readLine());
 			
-			if (key<=0) {
-				System.out.println("Numbers <=0 does not exists in the Hash Table.");
+			if(hashtable.search(key) !=0) {
+				System.out.println("Index : " + hashtable.search(key) + " Key : " + key);
 			}else {
-				if(hashtable.search(key) !=0) {
-					System.out.println("Index : " + hashtable.search(key) + " Key : " + key);
-				}else {
-					System.out.println("Key does not exist in the hashtable.");
-				}
+				System.out.println("Key does not exist in the hashtable.");
 			}
 		} catch (NumberFormatException e) {
 			System.out.println("The only allowed inputs are POSITIVE INTEGERS!\nPlease try again.");
@@ -113,15 +109,10 @@ public class Main {
 			System.out.println("\n--Delete Key--");
 			System.out.print("Enter Key to Delete: ");
 			int key = Integer.parseInt(reader.readLine());
-			
-			if(key<=0) {
-				System.out.println("Numbers <=0 does not exists in the Hash Table.");
+			if(hashtable.delete(key)) {
+				System.out.println("Key is deleted successfully!");
 			}else {
-				if(hashtable.delete(key)) {
-					System.out.println("Key is deleted successfully!");
-				}else {
-					System.out.println("Key is not found in the Hash Table.");
-				}
+				System.out.println("Key is not found in the Hash Table.");
 			}
 		} catch (NumberFormatException e) {
 			System.out.println("The only allowed inputs are POSITIVE INTEGERS!\nPlease try again.");
@@ -129,5 +120,6 @@ public class Main {
 			System.out.println(
 					"The only allowed inputs are POSITIVE INTEGERS, no Negative Integer!\nPlease try again.");
 		}
+
 	}
 }
