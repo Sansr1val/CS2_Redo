@@ -1,20 +1,11 @@
 public class LinkedList {
 	private Node head;
 	
-	// Setters and Getters of the head node
-	public Node getHead() {
-		return head;
-	}
-
-	private void setHead(Node head) {
-		this.head = head;
-	}
-	
-        /*
+	/*
 	 * Method for adding a new node. If the linked list is empty, 
-         * the new node will be the head of the list. 
-         * If not, the new node will be added at the end of the list.
-	 */ 
+	 * the new node will be the head of the list. 
+	 * If not, the new node will be added at the end of the list.
+	 */
 	public void append(Node node) {
 		if (head == null) {
 			head = node;
@@ -46,7 +37,7 @@ public class LinkedList {
 	 * Deletes a key in the list.
 	 * It first checks if the list is empty. 
 	 * If the list is empty, it returns false, otherwise it checks if the head node contains the key.
-	 * If found on the head node, the node is deleted and returns true, otherwise, the list is traversed.
+	 * If key is found on the head node, the node is deleted and returns true, otherwise, the list is traversed.
 	 * If it's found, the key is deleted and returns true, otherwise, returns false.
 	 */
 	public boolean remove(int key) {
@@ -72,6 +63,7 @@ public class LinkedList {
 	 * Displays the contents of the list.
 	 * Each key is segmented by the string " -> ".
 	 * A substring is made to remove the last unnecessary " -> ".
+	 * Returns String str.
 	 */
 	public String displayInfo() {
 		Node currentNode = head;
